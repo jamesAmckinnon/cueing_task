@@ -37,7 +37,7 @@ function done(){
 
     for (var i = 0 ; i < start_time.length ; i++){
         console.log(i)
-        var result = ((time_of_click[i] - start_time[i]) * (1/100) )
+        var result = ((time_of_click[i] - start_time[i]) * (1/1000) )
         var resultDiv = document.createElement('div');
         resultDiv.setAttribute("id", "result");
         resultDiv.appendChild(document.createTextNode([i + 1] + ") " + (cued[i] ? "Cued " : "Uncued ")  + 
