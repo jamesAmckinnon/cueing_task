@@ -24,7 +24,7 @@ function stop(){
 
     resetImages()
 
-    document.getElementById("cross").style.display = "block";
+    document.getElementById("cross").style.display = "flex";
     start()
 }
 
@@ -41,7 +41,7 @@ function done(){
         var resultDiv = document.createElement('div');
         resultDiv.setAttribute("id", "result");
         resultDiv.appendChild(document.createTextNode([i + 1] + ") " + (cued[i] ? "Cued " : "Uncued ")  + 
-                                                       "      result: " + Math.round((result + Number.EPSILON) * 100) / 100 + "s"));  
+                                                       "      result: " + Math.round((result + Number.EPSILON) * 1000) / 1000 + "s"));  
         var text = document.getElementById('summary')
         text.appendChild(resultDiv);
     }
@@ -54,7 +54,7 @@ function restart(){
 function task(gaze_direction, gaze_time, target_location, target_time){
     document.getElementById("start-container").style.display = "none";
     document.getElementById("task-container").style.display = "flex";
-    document.getElementById("cross").style.display = "block";
+    document.getElementById("cross").style.display = "flex";
 
     sleep(gaze_time).then(() => {
         document.getElementById("cross").style.display = "none";
