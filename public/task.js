@@ -14,7 +14,7 @@ function start(){
     var random_target = left_or_right[Math.floor(Math.random()*left_or_right.length)]
     cued.push( (random_gaze == random_target) ? true : false ) // was the gaze/target cued?
 
-    task(random_gaze, random_time1, random_target, random_time2)
+    task(random_gaze, random_time1, random_target, random_time2) // start task
     
 }
 
