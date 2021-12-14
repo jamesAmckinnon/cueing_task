@@ -25,6 +25,10 @@ li {
   font-size: large;
 }
 
+button {
+  background-color: white;
+}
+
 .container {
   height: 100%;
   width: 100%;
