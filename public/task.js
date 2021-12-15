@@ -61,7 +61,7 @@ function done(){
     resetImages()
 
     // this inserts the results into divs when the cueing task is complete
-    for (var i = 0 ; i < start_time.length ; i++){
+    for (var i = 0 ; i < time_of_click.length ; i++){
         var result = ((time_of_click[i] - start_time[i]) * (1/1000) )
         var resultDiv = document.createElement('div');
         resultDiv.setAttribute("id", "result");
@@ -95,4 +95,4 @@ function resetImages(){
 
 const wait = (milliseconds) => {
     return new Promise(resolve => setTimeout(resolve, milliseconds))
-  }
+}
